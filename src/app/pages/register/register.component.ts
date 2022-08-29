@@ -10,6 +10,7 @@ import { EmployeeService } from 'src/app/services/employee.service'
   styleUrls: ['register.component.css'],
 })
 export class Register implements OnInit {
+  [x: string]: any
   raw6155: string = ' ';
   rawiu6l: string = ' ';
 
@@ -18,8 +19,8 @@ export class Register implements OnInit {
   managers: Manager[] = [];
 
   constructor(private employeeService: EmployeeService){
-
   }
+
   ngOnInit(): void {
     this.employeeService.getEmployee().subscribe(response => 
       console.log(response));//consola

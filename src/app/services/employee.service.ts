@@ -22,6 +22,6 @@ export class EmployeeService {
   }
 
   createEmployee(employee: Employee): Observable<Employee>{
-    return this.hhtp.post<Employee>(this.url+'/createEmployee',employee);
+    return this.hhtp.post<Employee>(`${this.url}/listar`,employee);
   }
 }

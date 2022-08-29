@@ -53,7 +53,7 @@
             </a>
           </div>
           <div class="register-text01">
-            <form class="formForm">
+            <form class="formForm"  name="createEmpl"  method="POST" novalidate ng-class="{'form-error':submitted}" >
               <label class="textLabel" for="name">
                 <span>Name</span>
                 <br />
@@ -82,7 +82,7 @@
                 <br />
                 <br />
               </label>
-              <select required class="input inputForm select" 
+              <select  class="input inputForm select" 
               [(ngModel)]="employee.manager" 
               name="manager"
               >
@@ -125,7 +125,6 @@
               <input
                 type="email"
                 pattern="+gmail.com"
-                required
                 [(ngModel)]="employee.email"
                 name="email"
                 placeholder="Email"
