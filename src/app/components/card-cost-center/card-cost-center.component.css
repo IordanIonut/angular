@@ -1,0 +1,363 @@
+:host { 
+  display: contents; 
+}
+.card-cost-center-text {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card-cost-center-text1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card-cost-center-text2 {
+  width: auto;
+  height: 100%;
+  align-self: center;
+  margin-top: 10px;
+  text-align: left;
+  text-transform: capitalize;
+}
+.card-cost-center-container1 {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-self: center;
+  margin-top: 20px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-cost-center-button {
+  color: transparent;
+  width: 10%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  margin-top: 0px;
+  transition: 0.3s;
+  align-items: flex-end;
+  margin-left: 50px;
+  padding-top: 0px;
+  border-width: 0px;
+  flex-direction: column;
+  padding-bottom: 0px;
+  justify-content: flex-end;
+  background-color: transparent;
+}
+
+.card-cost-center-icon {
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+}
+.card-cost-center-icon:hover {
+  fill: var(--dl-color-scheme-lightblue);
+}
+.card-cost-center-button1 {
+  color: transparent;
+  width: 10%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-end;
+  margin-top: 0px;
+  transition: 0.3s;
+  align-items: flex-end;
+  padding-top: 0px;
+  border-width: 0px;
+  margin-right: 50px;
+  flex-direction: column;
+  padding-bottom: 0px;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.card-cost-center-icon2 {
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+}
+.card-cost-center-icon2:hover {
+  fill: red;
+}
+.card-cost-center-root-class-name {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.card-cost-center-root-class-name3 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name4 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.card-cost-center-root-class-name10 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.card-cost-center-root-class-name11 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.card-cost-center-root-class-name12 {
+  align-self: center;
+}
+
+
+.card-cost-center-root-class-name15 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name16 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name17 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name18 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name19 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name20 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name21 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name22 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name23 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name24 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name25 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name26 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name27 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name28 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name29 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name30 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name31 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name32 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name33 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name34 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name35 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name36 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name37 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name38 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name39 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name40 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name41 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name42 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name43 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name44 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name45 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name46 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name47 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name48 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name49 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name50 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-cost-center-root-class-name51 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+@media(max-width: 479px) {
+  .card-cost-center-text1 {
+    font-size: 1rem;
+  }
+  .card-cost-center-text2 {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+  }
+}

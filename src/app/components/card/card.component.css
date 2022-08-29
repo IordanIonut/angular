@@ -1,0 +1,115 @@
+:host { 
+  display: contents; 
+}
+.card-container {
+  width: 30%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-text {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card-text1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card-text2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card-text3 {
+  width: 70%;
+  height: var(--dl-size-size-medium);
+  align-self: center;
+  margin-top: 10px;
+  text-align: left;
+  text-transform: capitalize;
+}
+.card-button {
+  color: transparent;
+  width: 10%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  margin-top: 10px;
+  align-items: flex-end;
+  margin-left: 0px;
+  padding-top: 0px;
+  border-width: 0px;
+  flex-direction: row;
+  padding-bottom: 0px;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.card-icon {
+  flex: 1;
+  width: 30px;
+  height: 30px;
+  align-self: flex-end;
+  transition: 0.3s;
+}
+.card-icon:hover {
+  fill: var(--dl-color-scheme-roz);
+  width: 35px;
+  height: 30px;
+}
+.card-root-class-name {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+.card-root-class-name2 {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.card-root-class-name3 {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.card-root-class-name4 {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.card-root-class-name5 {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.card-root-class-name6 {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.card-root-class-name7 {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.card-root-class-name8 {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.card-root-class-name9 {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.card-root-class-name10 {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}

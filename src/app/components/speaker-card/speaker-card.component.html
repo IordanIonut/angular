@@ -1,0 +1,12 @@
+<div class="speaker-card-speaker-card" [ngClass]="rootClassName">
+  <div class="speaker-card-image-container">
+    <img
+      [attr.alt]="image_alt"
+      [attr.src]="image_src"
+      class="speaker-card-image"
+    />
+  </div>
+  <span class="speaker-card-first-name">{{ firstName }}</span>
+  <span class="speaker-card-last-name">{{ lastName }}</span>
+  <span class="speaker-card-text">{{ role }}</span>
+</div>
