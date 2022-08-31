@@ -19,17 +19,22 @@
             <br />
           </h1>
           <div class="admin-login-text03">
-            <form class="formForm">
+            <form class="formForm" [formGroup]="form" (ngSubmit)="onSubmit()">
               <label class="textLabel">
                 <span>name</span>
                 <br />
                 <br />
               </label>
               <input
-                type="text"
-                required
-                placeholder="Name"
-                class="input inputForm"
+              type="text"
+              name="name"
+              id="name"
+              required
+              formControlName="name"
+              [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"
+              placeholder="Name"
+              class="input inputForm"
+              #name
               />
               <label class="textLabel">
                 <span>password</span>
@@ -37,29 +42,68 @@
                 <br />
               </label>
               <input
-                type="text"
+                type="password"
                 placeholder="Password"
-                class="input inputForm"
+                formControlName="password"
+                [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+                name="password"
+                class="input inputForm register-textinput2"
+                #password
               />
               <label class="textLabel">
                 <span>code</span>
                 <br />
                 <br />
               </label>
-              <input type="text" placeholder="Code" class="input inputForm" />
+              <input
+              type="text"
+              placeholder="Unique code"
+              name="code"
+              class="input inputForm register-textinput4"
+              formControlName="code"
+              [ngClass]="{ 'is-invalid': submitted && f['code'].errors }"
+              #code
+            />
               <button
                 type="submit"
+                (click)="testAdmin()"
+                [routerLink]="'admin'"
                 class="admin-login-primary button-primary button-lg buttonForm button"
               >
                 <span class="admin-login-text16">Login</span>
               </button>
             </form>
             <span class="errore admin-login-text17">
-              <span>
-                asdasdasdasdasdasdasdsadasasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-              </span>
-              <br />
-              <span>aaaaaaaaaaaaaaaaaaaaadsa</span>
+              <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                <div *ngIf="f['name'].errors['required']">Name is required!<br></div>
+                <div *ngIf="f['name'].errors['minlength']">
+                  Name must be at least 6 characters!<br>
+                </div>
+                <div *ngIf="f['name'].errors['maxlength']">
+                  Name must not exceed 20 characters!<br>
+                </div>
+              </div>
+                <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                  <div *ngIf="f['password'].errors['required']">Password is required!<br></div>
+                  <div *ngIf="f['password'].errors['minlength']">
+                    Password must be at least10 characters!<br>
+                  </div>
+                  <div *ngIf="f['password'].errors['maxlength']">
+                    Password must not exceed 10 characters!<br>
+                  </div>
+                </div>
+                <div *ngIf="submitted && f['code'].errors" class="invalid-feedback">
+                  <div *ngIf="f['code'].errors['required']">Number of phone is required!<br></div>
+                  <div *ngIf="f['code'].errors['minlength']">
+                    Code must be at least 10 characters!<br>
+                  </div>
+                  <div *ngIf="f['code'].errors['maxlength']">
+                    Code must not exceed 10 characters!<br>
+                  </div>
+                  <div *ngIf="f['code'].errors['pattern']">
+                    Code cannot contain letters!<br>
+                  </div>
+                </div>
             </span>
           </div>
         </div>

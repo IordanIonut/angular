@@ -53,8 +53,8 @@
             </a>
           </div>
           <div class="register-text01">
-            <form class="formForm"  name="createEmpl"  method="POST" novalidate ng-class="{'form-error':submitted}" >
-              <label class="textLabel" for="name">
+            <form class="formForm" [formGroup]="form" (ngSubmit)="onSubmit()">
+              <label class="textLabel">
                 <span>Name</span>
                 <br />
                 <br />
@@ -64,36 +64,46 @@
                 name="name"
                 [(ngModel)]="employee.name"
                 required
+                formControlName="name"
+                [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"
                 placeholder="Name"
                 class="input inputForm"
               />
-              <label class="textLabel" for="cos_center">
+              <label class="textLabel">
                 <span>Cost Center</span>
                 <br />
                 <br />
               </label>
-              <select required class="input inputForm register-select" [(ngModel)]="employee.cos_center" name="cos_center">
-                <option value="1" selected>Name1</option>
-                <option value="2">Name2</option>
-                <option value="3">Name3</option>
+              <select required class="input inputForm register-select" 
+                formControlName="cos_center"
+                [(ngModel)]="employee.cos_center" 
+                name="cos_center"
+                >
+                <option [ngValue]="undefined">Select your Cos Center</option>
+                <option 
+                *ngFor="let cos_center of cos_centers"
+                [ngValue]="cos_center"
+                >{{cos_center.name}}
+              </option>
               </select>
               <label class="textLabel" for="manager">
-                <span>manager</span>
+                <span>Manager</span> 
                 <br />
                 <br />
               </label>
               <select  class="input inputForm select" 
+              formControlName="manager"
               [(ngModel)]="employee.manager" 
               name="manager"
               >
-              <option [ngValue]="undefined">--- Select your Manger ---</option>
+              <option [ngValue]="undefined">Select your Manger</option>
                 <option 
                 *ngFor="let manager of managers"
                 [ngValue]="manager"
                 >{{manager.name}}
               </option>
               </select>
-              <label class="textLabel" for="nr_of_phone">
+              <label class="textLabel">
                 <span>Number of phone</span>
                 <br />
                 <br />
@@ -102,11 +112,14 @@
                 [(ngModel)]="employee.nr_of_phone"
                 name="nr_of_phone"
                 type="text"
+                required
+                formControlName="nr_of_phone"
+                [ngClass]="{ 'is-invalid': submitted && f['nr_of_phone'].errors }"
                 placeholder="Number of phone"
                 class="input inputForm register-textinput1"
               />
-              <label class="textLabel" for="password">             
-              <span>Pasword</span>
+              <label class="textLabel">
+                <span>Pasword</span>
                 <br />
                 <br />
               </label>
@@ -114,10 +127,12 @@
                 type="password"
                 placeholder="Password"
                 [(ngModel)]="employee.password"
+                formControlName="password"
+                [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
                 name="password"
                 class="input inputForm register-textinput2"
               />
-              <label class="textLabel" for="email">
+              <label class="textLabel">
                 <span>email</span>
                 <br />
                 <br />
@@ -125,12 +140,15 @@
               <input
                 type="email"
                 pattern="+gmail.com"
+                required
                 [(ngModel)]="employee.email"
                 name="email"
+                formControlName="email"
                 placeholder="Email"
+                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
                 class="input inputForm register-textinput3"
               />
-              <label class="textLabel" for="code">
+              <label class="textLabel">
                 <span class="register-text27">Code</span>
                 <br />
                 <br />
@@ -141,6 +159,8 @@
                 [(ngModel)]="employee.code"
                 name="code"
                 class="input inputForm register-textinput4"
+                formControlName="code"
+                [ngClass]="{ 'is-invalid': submitted && f['code'].errors }"
               />
               <button
                 type="submit"
@@ -154,11 +174,58 @@
               </button>
             </form>
             <span class="errore register-text33">
-              <span>
-                asdasdasdasdasdasdasdsadasasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-              </span>
-              <br />
-              <span>aaaaaaaaaaaaaaaaaaaaadsa</span>
+              <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                <div *ngIf="f['name'].errors['required']">Name is required!<br></div>
+                <div *ngIf="f['name'].errors['minlength']">
+                  Name must be at least 6 characters!<br>
+                </div>
+                <div *ngIf="f['name'].errors['maxlength']">
+                  Name must not exceed 20 characters!<br>
+                </div>
+              </div>
+              <div class="invalid-feedback" *ngIf="submitted && f['cos_center'].errors">
+                <div *ngIf="f['cos_center'].errors['required']">Please enter your cos center!<br></div>
+              </div>
+              <div class="invalid-feedback" *ngIf="submitted && f['manager'].errors">
+                <div *ngIf="f['manager'].errors['required']">Please enter your manager!<br></div>
+              </div>
+              <div *ngIf="submitted && f['nr_of_phone'].errors" class="invalid-feedback">
+                <div *ngIf="f['nr_of_phone'].errors['required']">Number of phone is required!<br></div>
+                <div *ngIf="f['nr_of_phone'].errors['minlength']">
+                  Number of phone must be at least 10 characters!<br>
+                </div>
+                <div *ngIf="f['nr_of_phone'].errors['maxlength']">
+                  Number of phone must not exceed 10 characters!<br>
+                </div>
+                <div *ngIf="f['nr_of_phone'].errors['pattern']">
+                  Phone number cannot contain letters!<br>
+                </div>
+              </div>
+              <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                <div *ngIf="f['password'].errors['required']">Password is required!<br></div>
+                <div *ngIf="f['password'].errors['minlength']">
+                  Password must be at least10 characters!<br>
+                </div>
+                <div *ngIf="f['password'].errors['maxlength']">
+                  Password must not exceed 10 characters!<br>
+                </div>
+              </div>
+              <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                <div *ngIf="f['email'].errors['required']">Email is required!<br></div>
+                <div *ngIf="f['email'].errors['email']">Email is invalid!<br></div>
+              </div>
+              <div *ngIf="submitted && f['code'].errors" class="invalid-feedback">
+                <div *ngIf="f['code'].errors['required']">Number of phone is required!<br></div>
+                <div *ngIf="f['code'].errors['minlength']">
+                  Code must be at least 10 characters!<br>
+                </div>
+                <div *ngIf="f['code'].errors['maxlength']">
+                  Code must not exceed 10 characters!<br>
+                </div>
+                <div *ngIf="f['code'].errors['pattern']">
+                  Code cannot contain letters!<br>
+                </div>
+              </div>
             </span>
           </div>
         </div>

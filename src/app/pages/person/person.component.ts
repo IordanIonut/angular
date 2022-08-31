@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { Title, Meta } from '@angular/platform-browser'
 
 @Component({
@@ -6,7 +6,7 @@ import { Title, Meta } from '@angular/platform-browser'
   templateUrl: 'person.component.html',
   styleUrls: ['person.component.css'],
 })
-export class Person {
+export class Person{
   raw3d3u: string = ' '
   rawpcpi: string = ' '
 
@@ -19,4 +19,5 @@ export class Person {
       },
     ])
   }
+
 }

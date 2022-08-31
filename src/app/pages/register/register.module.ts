@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 import { CommonModule } from '@angular/common'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComponentsModule } from '../../components/components.module'
 import { Register } from './register.component';
 
@@ -17,6 +17,7 @@ const routes = [
   imports: [CommonModule, 
     ComponentsModule, 
     FormsModule, 
+    ReactiveFormsModule,
     RouterModule.forChild(routes)],
   exports: [Register],
 })

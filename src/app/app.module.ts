@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentsModule } from './components/components.module'
 import { AppComponent } from './app.component'
@@ -94,10 +94,12 @@ const routes: Routes =[
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, RouterModule.forRoot(routes), 
+  imports: [BrowserModule, 
+    RouterModule.forRoot(routes), 
     ComponentsModule,
     FormsModule,
-    HttpClientModule],
+    HttpClientModule,
+    ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
